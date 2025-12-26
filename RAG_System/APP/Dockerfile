@@ -1,6 +1,6 @@
 FROM python:3.10-slim
 
-WORKDIR /app
+WORKDIR /RAG_System/app
 
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
@@ -23,5 +23,6 @@ RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
 COPY . .
 
 EXPOSE 8050
+
 
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8050"]
