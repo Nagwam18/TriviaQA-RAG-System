@@ -1,0 +1,15 @@
+datasets
+transformers
+sentence-transformers
+chromadb
+langchain
+langchain-community
+langchain-chroma
+langchain-huggingface
+fastapi
+uvicorn
+python-dotenv
+bitsandbytes
+accelerate
+nest-asyncio
+torch
