@@ -121,6 +121,8 @@ This configuration prioritizes precision over creativity and reduces hallucinati
 
 The system was benchmarked using a dedicated evaluation script (`evaluate.py`) on a subset (20 QA) of the TriviaQA dataset.
 
+![Evaluation Results](assests/evaluation_results.jpeg)
+
 ### Evaluation Metrics
 
 | Metric           | Result      |
@@ -149,3 +151,64 @@ The system was benchmarked using a dedicated evaluation script (`evaluate.py`) o
 ├── evaluate.py              # Evaluation script
 └── README.md
 ```
+
+---
+
+## 🐳 Setup & Docker Instructions
+
+### 1. Docker Setup
+
+```bash
+        # Build the Docker image
+        docker build -t trivia-rag .
+```
+# Run the container
+```bash
+        docker run -p 8050:8050 trivia-rag
+```
+
+### 2. Manual Setup
+
+``` bash
+        git clone <repo_url>
+        cd Trivia-RAG-Explorer
+        pip install -r requirements.txt
+
+```
+        **Indexing:**
+        ```bash
+                python preprocess.py
+                python vector_store.py
+```
+
+        **Run API:**
+        ```bash
+                python app.py
+        ```
+        **Send POST requests to:**
+        ```bash
+                http://localhost:8050/query
+        ```
+        **Payload example:**
+        ```json
+                {
+                   "question": "Which country left the Commonwealth in 1972?"
+                }
+        ```
+---
+# **Usage Notes**
+  - GPU Recommended: For optimal latency (<5 seconds), running on a T4 or A100 GPU is strongly recommended.
+    
+  - Strict Answering: All answers are limited to 1–3 words and must appear in the retrieved context.
+
+  - Error Handling:
+    
+      - Empty or whitespace-only queries return: ``` Empty query received ```.
+      - Missing evidence returns: ``` Not found in context```.
+    
+
+
+
+
+   
+
