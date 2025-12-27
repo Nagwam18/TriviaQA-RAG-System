@@ -188,14 +188,17 @@ The system was benchmarked using a dedicated evaluation script (`evaluate.py`) o
         ```
         
 **Send POST requests to:**
-        ```bash
+        ``` 
+        
                 http://localhost:8050/query
+                
         ```
         
 **Payload example:**
-        ```json
-                {
+        ```   {
+                
                    "question": "Which country left the Commonwealth in 1972?"
+                   
                 }
         ```
         
