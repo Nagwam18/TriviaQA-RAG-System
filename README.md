@@ -1,6 +1,6 @@
 # Trivia-RAG-Explorer 🧠🔍
 
-An advanced Retrieval-Augmented Generation (RAG) system built to answer complex open-domain questions from the TriviaQA dataset using a local Mistral-7B LLM pipeline.
+A Retrieval-Augmented Generation (RAG) system built to answer x open-domain questions from the **TriviaQA** dataset using a **local Mistral-7B LLM pipeline**.
 
 ---
 
@@ -8,11 +8,11 @@ An advanced Retrieval-Augmented Generation (RAG) system built to answer complex 
 
 This project implements a complete end-to-end RAG pipeline that leverages:
 
-- LLM: Mistral-7B (via HuggingFace)
-- Vector Database: ChromaDB
-- Embedding Model: sentence-transformers/all-MiniLM-L6-v2
-- Framework: LangChain
-- API Layer: FastAPI
+- LLM: **Mistral-7B (via HuggingFace)**
+- Vector Database: **ChromaDB**
+- Embedding Model: **sentence-transformers/all-MiniLM-L6-v2**
+- Framework: **LangChain**
+- API Layer: **FastAPI**
 
 The system is optimized to process long-form documents (some exceeding 89k words) and retrieve the most relevant context to generate **short, evidence-based answers** grounded strictly in the retrieved text.
 
