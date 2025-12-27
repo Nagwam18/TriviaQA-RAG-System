@@ -203,9 +203,19 @@ The system was benchmarked using a dedicated evaluation script (`evaluate.py`) o
         "question": "Which country left the Commonwealth in 1972?"
       }
  ```
+
+## 🎥 Demo Video
+
+A short demo video is available demonstrating:
+- Running the application
+- Calling the `/query` API endpoint
+- Viewing the generated answer and retrieved context
+
+📎 Video Link: < [Google Drive Link](https://drive.google.com/file/d/1o-19x0EFOMMb3T984BOTloRH0jvHu4VU/view?usp=sharing)>
+
         
 ---
-# **Usage Notes**
+## **Usage Notes**
   - GPU Recommended: For optimal latency (<5 seconds), running on a T4 or A100 GPU is strongly recommended.
     
   - Strict Answering: All answers are limited to 1–3 words and must appear in the retrieved context.
@@ -214,8 +224,41 @@ The system was benchmarked using a dedicated evaluation script (`evaluate.py`) o
     
       - Empty or whitespace-only queries return: ``` Empty query received ```.
       - Missing evidence returns: ``` Not found in context```.
-    
 
+---
+## Limitations & Notes
+
+- This system relies strictly on the retrieved context; if the correct answer is not present in the indexed data, the model will return "Not found in context".
+
+- Evaluation metrics (Accuracy, Relevance, Latency) may slightly vary between runs due to hardware differences and retrieval ranking behavior.
+
+- The current evaluation is performed on a limited subset of TriviaQA and is not intended to represent full-dataset performance.
+
+- Latency measurements depend on runtime environment (CPU vs GPU).
+
+---
+
+## 📄 License
+
+This project is released under the MIT License.
+You are free to use, modify, and distribute this code with proper attribution.
+
+---
+## Conclusion
+
+This project demonstrates a complete end-to-end Retrieval-Augmented Generation (RAG) pipeline
+built on the TriviaQA dataset, with a strong focus on:
+
+- Faithful, context-grounded answering (no hallucinations)
+- Efficient chunking and retrieval for long documents
+- Clear evaluation of accuracy, relevance, and latency
+- Production-ready API exposure via FastAPI
+
+The system prioritizes correctness and evidence over verbosity, making it suitable for
+high-stakes QA scenarios where reliability is critical.
+
+---
+    
 
 
 
