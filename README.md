@@ -129,7 +129,7 @@ The system was benchmarked using a dedicated evaluation script (`evaluate.py`) o
 |------------------|-------------|
 | Accuracy         | 50.00%      |
 | Relevance        | 50.00%      |
-| Average Latency  | 4189.0 ms   |
+| Average Latency  | 4142.1 ms   |
 
 **Notes:**
 - Accuracy includes both **Correct** and **Partially Correct** answers.
