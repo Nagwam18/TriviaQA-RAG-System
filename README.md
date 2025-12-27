@@ -172,29 +172,33 @@ The system was benchmarked using a dedicated evaluation script (`evaluate.py`) o
 ``` bash
         git clone <repo_url>
         cd Trivia-RAG-Explorer
-        pip install -r requirements.txt
+        pip install -r requirements.txt 
+ ```
 
-```
-        **Indexing:**
+**Indexing:**
+        
         ```bash
                 python preprocess.py
                 python vector_store.py
-```
+        ```
 
-        **Run API:**
+**Run API:**
         ```bash
                 python app.py
         ```
-        **Send POST requests to:**
+        
+**Send POST requests to:**
         ```bash
                 http://localhost:8050/query
         ```
-        **Payload example:**
+        
+**Payload example:**
         ```json
                 {
                    "question": "Which country left the Commonwealth in 1972?"
                 }
         ```
+        
 ---
 # **Usage Notes**
   - GPU Recommended: For optimal latency (<5 seconds), running on a T4 or A100 GPU is strongly recommended.
