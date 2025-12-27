@@ -1,6 +1,7 @@
 # Trivia-RAG-Explorer 
 
-A Retrieval-Augmented Generation (RAG) system built to answer x open-domain questions from the **TriviaQA** dataset using a **local Mistral-7B LLM pipeline**.
+- A Retrieval-Augmented Generation (RAG) system built to answer x open-domain questions from the **TriviaQA** ``` mandarjoshi/trivia_qa ```  [dataset](https://huggingface.co/datasets/mandarjoshi/trivia_qa)  from **Hugging Face** using a **local Mistral-7B LLM pipeline**.
+- Evaluation on [sampl of triviaqa data](https://nlp.cs.washington.edu/triviaqa/sample.html).
 
 ---
 
@@ -204,7 +205,7 @@ The system was benchmarked using a dedicated evaluation script (`evaluate.py`) o
       }
  ```
 
-## 🎥 Demo Video
+## Demo Video
 
 A short demo video is available demonstrating:
 - Running the application
