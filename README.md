@@ -212,7 +212,7 @@ A short demo video is available demonstrating:
 - Calling the `/query` API endpoint
 - Viewing the generated answer and retrieved context
 
-📎 Video Link: < [Google Drive Link](https://drive.google.com/file/d/1o-19x0EFOMMb3T984BOTloRH0jvHu4VU/view?usp=sharing)>
+📎 Video Link:  [Google Drive Link](https://drive.google.com/file/d/1o-19x0EFOMMb3T984BOTloRH0jvHu4VU/view?usp=sharing)
 
         
 ---
