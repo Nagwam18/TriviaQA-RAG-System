@@ -121,7 +121,7 @@ This configuration prioritizes precision over creativity and reduces hallucinati
 
 The system was benchmarked using a dedicated evaluation script (`evaluate.py`) on a subset (20 QA) of the TriviaQA dataset.
 
-![Evaluation Results](assests/evaluation_results.jpeg)
+![Evaluation Results](assests/evaluation_results.png)
 
 ### Evaluation Metrics
 
