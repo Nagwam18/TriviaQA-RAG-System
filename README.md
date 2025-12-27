@@ -172,35 +172,32 @@ The system was benchmarked using a dedicated evaluation script (`evaluate.py`) o
 ``` bash
         git clone <repo_url>
         cd Trivia-RAG-Explorer
-        pip install -r requirements.txt 
- ```
+        pip install -r requirements.txt
+```
 
 **Indexing:**
         
-        ```bash
-                python preprocess.py
-                python vector_store.py
-        ```
+```bash
+        python preprocess.py
+        python vector_store.py
+```
 
 **Run API:**
-        ```bash
-                python app.py
-        ```
+```bash 
+        python app.py
+```
         
 **Send POST requests to:**
-        ``` 
-        
-                http://localhost:8050/query
-                
-        ```
+```bash
+        http://localhost:8050/query
+```
         
 **Payload example:**
-        ```   {
-                
-                   "question": "Which country left the Commonwealth in 1972?"
-                   
-                }
-        ```
+```json
+       {
+        "question": "Which country left the Commonwealth in 1972?"
+      }
+ ```
         
 ---
 # **Usage Notes**
