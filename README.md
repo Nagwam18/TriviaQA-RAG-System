@@ -1,10 +1,10 @@
-# Trivia-RAG-Explorer 🧠🔍
+# Trivia-RAG-Explorer 
 
 A Retrieval-Augmented Generation (RAG) system built to answer x open-domain questions from the **TriviaQA** dataset using a **local Mistral-7B LLM pipeline**.
 
 ---
 
-## 🚀 Overview
+## Overview
 
 This project implements a complete end-to-end RAG pipeline that leverages:
 
@@ -18,7 +18,7 @@ The system is optimized to process long-form documents (some exceeding 89k words
 
 ---
 
-## 📊 Data Analysis & Chunking Strategy
+## Data Analysis & Chunking Strategy
 
 Before building the vector store, a detailed statistical analysis was performed on the raw TriviaQA paragraphs to optimize retrieval quality and ensure compliance with the model token limits.
 
@@ -50,7 +50,7 @@ This transformation significantly improves retrieval efficiency while maintainin
 
 ---
 
-## 🛠️ Data Cleaning & Pre-processing
+##  Data Cleaning & Pre-processing
 
 To ensure high-quality embeddings and reduce noise, a specialized `clean_text` pipeline was implemented.
 
@@ -64,7 +64,7 @@ Short segments in TriviaQA often contain metadata such as page numbers, section 
 
 ---
 
-## 🧩 System Architecture
+##  System Architecture
 
 The system follows a classic high-precision RAG architecture:
 
@@ -85,7 +85,7 @@ The system follows a classic high-precision RAG architecture:
 ```
 ---
 
-## 🧠 Prompt Design
+##  Prompt Design
 ```
 A strict prompt is used to minimize hallucinations and enforce answer faithfulness:
 <s>[INST] You are a helpful QA assistant. Use the following context to answer the question accurately. 
@@ -104,7 +104,7 @@ Answer:
 
 ---
 
-## ⚙️ LLM Configuration
+##  LLM Configuration
 
 The generation pipeline is tuned for determinism and factual accuracy:
 
@@ -117,7 +117,7 @@ This configuration prioritizes precision over creativity and reduces hallucinati
 
 ---
 
-## 📊 Evaluation & Performance Summary
+##  Evaluation & Performance Summary
 
 The system was benchmarked using a dedicated evaluation script (`evaluate.py`) on a subset (20 QA) of the TriviaQA dataset.
 
@@ -138,18 +138,23 @@ The system was benchmarked using a dedicated evaluation script (`evaluate.py`) o
 
 ---
 
-## 📦 Repository Structure
+##  Repository Structure
 ```
-├── Dockerfile               # Containerization script
-├── requirements.txt         # Python dependencies
-├── embedding_model.py       # Sentence embedding model setup
-├── llm_model.py             # LLM (Mistral-7B) setup
-├── preprocess.py            # TriviaQA preprocessing & chunking
-├── vector_store.py          # Build vector DB from chunks
-├── pipeline.py              # Core RAG execution logic
-├── app.py                   # FastAPI for API
-├── evaluate.py              # Evaluation script
+├── RAG_System
+│   └── APP
+│       ├── Dockerfile               
+│       ├── app.py                   
+│       ├── embedding_model.py       
+│       ├── evaluation.py             
+│       ├── llm_model.py             
+│       ├── pipeline.py               
+│       ├── preprocess.py             
+│       ├── requirements.txt          
+│       ├── vector_store.py           
+│       └── triviaqa-rag-notebook.ipynb
+├── assets/                          
 └── README.md
+
 ```
 
 ---
